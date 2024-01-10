@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-from second import saying_goodbye, saying_hello
+from saying_helper import saying_goodbye, saying_hello
   
 saying_hello()
 
