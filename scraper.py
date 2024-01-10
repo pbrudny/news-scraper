@@ -1,6 +1,10 @@
 import requests
 from bs4 import BeautifulSoup
 
+from second import saying_goodbye, saying_hello
+  
+saying_hello()
+
 # URL of the site to be scraped
 url = 'https://ox.pl'
 
@@ -15,3 +19,5 @@ soup = BeautifulSoup(response.text, 'html.parser')
 for title in soup.find_all('h2'):
   if title.text.strip() == 'Nasze Słoneczko':
     print('There is a title with the word "Słoneczko" in the page')
+
+saying_goodbye()
