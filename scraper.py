@@ -13,4 +13,5 @@ soup = BeautifulSoup(response.text, 'html.parser')
 # Find elements containing the information you want to extract
 # For example, article titles in <h2> tags
 for title in soup.find_all('h2'):
-    print(title.text.strip())
+  if title.text.strip() == 'Nasze Słoneczko':
+    print('There is a title with the word "Słoneczko" in the page')
